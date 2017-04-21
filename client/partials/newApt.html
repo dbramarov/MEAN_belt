@@ -1,0 +1,16 @@
+<div ng-controller="aptController">
+
+	<h1 ng-repeat="message in messages">{{message}}</h1>
+	<h2>New Appointment</h2>
+	<hr>
+
+	<form>
+		<p>Date: <input type="date" ng-model='newApt.date' required></p>
+		<p>Time: <input type="time" min="08:00:00" max="17:00:00" ng-model='newApt.time' required></p>
+		<p>Complain: <textarea ng-model='newApt.complain' required></textarea></p>
+		<input type="submit" value="Add Appointment" ng-click='newApttt(user)'>
+	</form>
+
+	<button ng-click='cancel()'>Cancel</button>
+
+</div>

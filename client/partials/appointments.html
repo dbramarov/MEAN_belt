@@ -1,0 +1,27 @@
+<div ng-controller="drController">
+
+	<h1 ng-repeat="message in messages">{{message}}</h1>
+	<h2>Doctor's Appointments</h2>
+	<p>Welcome: {{user}}</p>
+	<button ng-click='logout()'>Log Out</button>
+	<hr>
+	<h1 ng-repeat="err in errors">{{err}}</h1>
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Patient Name</th>
+			<th>Complain</th>
+			<th>Delete Appointment</th>
+		</tr>
+		<tr ng-repeat='app in aps | filter: filter_apt | orderBy: "-date": true'>
+			<td>{{app.date | date}}</td>
+			<td>{{app.time | date:"h:mma"}}</td>
+			<td>{{app.name}}</td>
+			<td>{{app.complain}}</td>			
+			<td><button ng-click='removeApt(app._id)'>delete</button></td>
+		</tr>
+	</table>
+	<p>Search Appointments: <input type="text" ng-model='filter_apt'></p>
+	<button ng-click='newApt()'>Add New Appointment</button>
+</div>

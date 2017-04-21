@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+        <meta charset="utf-8">
+        <script src="angular/angular.js"></script>
+        <script src="angular-route/angular-route.js"></script>
+        <script src="assets/app.js" charset="utf-8"></script>
+        <script src="angular-cookies/angular-cookies.js"></script>        
+        <script src="assets/factories/usersFactory.js" charset="utf-8"></script> 
+        <script src="assets/factories/drFactory.js" charset="utf-8"></script> 
+        <script src="assets/factories/aptFactory.js" charset="utf-8"></script>         
+        <script src="assets/controllers/usersController.js" charset="utf-8"></script>
+        <script src="assets/controllers/drController.js" charset="utf-8"></script>
+        <script src="assets/controllers/aptController.js" charset="utf-8"></script>
+        <title>MEAN BELT</title>
+        <style type="text/css">
+            table, th, td {
+                border: 1px solid black; padding: 5px; text-align: center;
+            }
+        </style>        
+</head>
+<body>
+<!--     <h3>
+        <a href="#!/">Dashboard</a> |
+        <a href="#!/products">Products</a> |
+        <a href="#!/orders">Orders</a> |
+        <a href="#!/customers">Customers</a>
+    </h3> -->
+    <div ng-view="">
+        
+    </div>
+</body>
+</html>
